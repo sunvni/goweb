@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Go Template</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-    <script src="assets/js/main.js"></script>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <script src="/assets/js/main.js"></script>
 </head>
 <body>
     <h1>Hello World</h1>
+    <button onclick="test()">Test Javascript</button>
     <ul>
         {{range .}}
         <li>{{.Name}}
@@ -20,5 +21,17 @@
         </li>
         {{end}}
     </ul>
+
+    <form action="/add" method="POST">
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name"><br>
+        <label for="price">Price</label>
+        <input type="text" name="price" id="price"><br>
+        <label for="description">Description</label>
+        <textarea name="description" id="description" cols="30" rows="10"></textarea>
+        <hr>
+        <input type="submit" value="Submit">
+    </form>
+
 </body>
 </html>

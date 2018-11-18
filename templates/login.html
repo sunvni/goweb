@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Go Template</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <script src="/assets/js/main.js"></script>
+</head>
+
+<body>
+    
+    <h1>Login Form</h1>
+
+    <form action="/login/" method="POST">
+        <input type="hidden" name="token" value="{{.}}">
+        <div class="form-item">
+            <label for="user_name">Username
+                <input type="text" name="username" id="user_name" placeholder="username">
+            </label>
+        </div>
+        <div class="form-item">
+            <label for="login_password">Password
+            <input type="password" name="password" id="login_password" placeholder="password">
+            </label>
+        </div>
+        <hr>
+        <div class="form-item">
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+
+</body>
+
+</html>
